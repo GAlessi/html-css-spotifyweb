@@ -41,7 +41,7 @@ ul{
     height: auto;
 }
 
-/* Regole sottomenù sinistra */
+/* Regole dei sottomenù sinistra */
 .nav_left ul{
     margin-bottom: 10px;
 }
@@ -67,7 +67,7 @@ ul{
     background-color: #C8FF00;
 }
 
-.nav_left a{
+.nav_left a, #selezione a{
     color: rgb(128, 128, 128);
 }
 
@@ -95,6 +95,7 @@ ul{
     margin-right: 10px;
 }
 
+/* Regole menù utente sinistra */
 .installa{
     padding-bottom: 10px;
 }
@@ -114,13 +115,6 @@ ul{
     font-size: 16px;
 }
 
-/* Regole parte destra */
-.colonne_right{
-    width: calc(100% - 200px);
-    height: calc(100vh - 100px);
-}
-
-/* Regole menù utente */
 .installa{
     border-bottom: 1px solid rgb(128, 128, 128);
 }
@@ -128,6 +122,12 @@ ul{
 #download{
     height: 15px;
     vertical-align: middle;
+}
+
+/* Regole parte destra */
+.colonne_right{
+    width: calc(100% - 200px);
+    height: calc(100vh - 100px);
 }
 
 /* Regole navbar interna */
@@ -144,6 +144,30 @@ ul{
 .container_musica{
     height: calc(100vh - 200px);
     background-color: red;
+    overflow: auto;
+}
+
+#selezione{
+    margin: 10px auto;
+    text-align: center;
+}
+
+#selezione li{
+    display: inline-block;
+}
+
+.row_flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row_flex .musica{
+    background-color: yellow;
+    border: 1px solid black;
+    height: 200px;
+    width: calc(100% / 6);
+    padding: 0 5px;
 }
 
 /* Regole del player */
