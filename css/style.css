@@ -1,5 +1,42 @@
+/* Regole generali della pagina */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Regole menù sinistro */
+.nav_left{
+    height: calc(100vh - 100px);
+    width: 200px;
+    background-color: blue;
+}
+
+/* Regole parte destra */
+.colonne_right{
+    width: calc(100% - 200px);
+    height: 100%;
+}
+
+/* Regole navbar interna */
+.nav_interna{
+    height: 100px;
+    background-color: black;
+}
+
+/* Regole blocco con scroll */
+.container_musica{
+    height: calc(100% - 100px);
+    background-color: red;
+}
+
+/* Regole del player */
+.player{
+    height: 100px;
+    background-color: black;
 }
