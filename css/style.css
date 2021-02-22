@@ -3,6 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+a{
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .container{
@@ -14,29 +24,130 @@
 .nav_left{
     height: calc(100vh - 100px);
     width: 200px;
-    background-color: blue;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 150px;
+    height: auto;
+}
+
+/* Regole sottomenù sinistra */
+.nav_left ul{
+    margin-bottom: 10px;
+}
+
+.nav_left li{
+    padding: 5px 15px;
+}
+
+.nav_left li:first-child a{
+    color: white;
+}
+
+#selected{
+    position: relative;
+}
+
+.selettore{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #C8FF00;
+}
+
+.nav_left a{
+    color: rgb(128, 128, 128);
+}
+
+.nav_left img{
+    height: 20px;
+    vertical-align: middle;
+}
+
+#plus{
+    color: black;
+    padding: 5px;
+    background-color: rgb(128, 128, 128);
+}
+
+.utente{
+    width: 90%;
+    margin:0 auto;
+}
+
+#upgrade{
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.installa{
+    padding-bottom: 10px;
+}
+
+.profilo{
+    margin: 10px 0;
+}
+
+.profilo img{
+    border-radius: 50%;
+    padding: 0 2px;
+    background-color: rgb(128, 128, 128);
+}
+
+.profilo span{
+    color: white;
+    font-size: 16px;
 }
 
 /* Regole parte destra */
 .colonne_right{
     width: calc(100% - 200px);
-    height: 100%;
+    height: calc(100vh - 100px);
+}
+
+/* Regole menù utente */
+.installa{
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+#download{
+    height: 15px;
+    vertical-align: middle;
 }
 
 /* Regole navbar interna */
 .nav_interna{
     height: 100px;
-    background-color: black;
+    background-color: blue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
 
 /* Regole blocco con scroll */
 .container_musica{
-    height: calc(100% - 100px);
+    height: calc(100vh - 200px);
     background-color: red;
 }
 
 /* Regole del player */
 .player{
     height: 100px;
-    background-color: black;
+    background-color: blue;
 }
