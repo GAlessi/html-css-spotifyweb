@@ -8,11 +8,18 @@
 
 a{
     text-decoration: none;
-    font-size: 14px;
 }
 
 ul{
     list-style-type: none;
+}
+
+.white{
+    color: white;
+}
+
+.grey{
+    rgb(128, 128, 128)
 }
 
 .container{
@@ -47,7 +54,7 @@ ul{
 }
 
 .nav_left li{
-    padding: 5px 15px;
+    padding: 2px 15px;
 }
 
 .nav_left li:first-child a{
@@ -58,7 +65,7 @@ ul{
     position: relative;
 }
 
-.selettore{
+.selezione_verticale{
     position: absolute;
     top: 0;
     left: 0;
@@ -69,6 +76,7 @@ ul{
 
 .nav_left a, #selezione a{
     color: rgb(128, 128, 128);
+    font-size: 14px;
 }
 
 .nav_left img{
@@ -88,7 +96,6 @@ ul{
 }
 
 #upgrade{
-    color: white;
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px;
@@ -111,7 +118,6 @@ ul{
 }
 
 .profilo span{
-    color: white;
     font-size: 16px;
 }
 
@@ -133,7 +139,7 @@ ul{
 /* Regole navbar interna */
 .nav_interna{
     height: 100px;
-    background-color: blue;
+    background-color: #080b12;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -141,10 +147,15 @@ ul{
 
 
 /* Regole blocco con scroll */
+section{
+    margin: 30px 0;
+}
+
 .container_musica{
     height: calc(100vh - 200px);
-    background-color: red;
+    background-color: #141922;
     overflow: auto;
+    padding: 20px;
 }
 
 #selezione{
@@ -154,24 +165,174 @@ ul{
 
 #selezione li{
     display: inline-block;
+    margin: 0 5px;
+}
+
+#selezione li:first-child{
+    position: relative;
+}
+
+.selezione_orizzontale{
+    width: 40%;
+    height: 3px;
+    margin: 0 auto;
+    background-color:#C8FF00;
 }
 
 .row_flex{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .row_flex .musica{
-    background-color: yellow;
-    border: 1px solid black;
-    height: 200px;
-    width: calc(100% / 6);
-    padding: 0 5px;
+    max-width: calc(100% / 6 - 20px);
+    margin: 0 10px;
 }
 
-/* Regole del player */
-.player{
+.container_musica h2, .container_musica h3 {
+    color: white;
+}
+
+.container_musica h2{
+    margin: 10px;
+}
+
+.container_musica h3{
+    margin: 15px 0;
+}
+
+.container_musica h5{
+    color: rgb(128, 128, 128);
+}
+
+.container_musica section > h5{
+    margin: 10px;
+}
+
+.container_musica .musica{
+    text-align: center;
+}
+
+.container_musica .album{
+    position: relative;
+}
+
+.container_musica img{
+    width: 100%;
+}
+
+.container_musica .layover{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 5px );
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container_musica .layover i{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.album:hover .layover{
+    display: block;
+}
+
+.container_musica .musica.circle img, .container_musica .musica.circle .layover{
+    border-radius: 50%;
+}
+
+/* Regole della barra player */
+.barra_player{
     height: 100px;
-    background-color: blue;
+    background-color: #282828;
+    color: rgb(128, 128, 128);
+    padding: 0 10px;
+}
+
+.barra_player .brano{
+    min-width: 190px;
+}
+
+.barra_player, .barra_player .brano, .barra_player .favourite{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player{
+    width: 40%;
+    text-align: center;
+}
+
+.barra_player img{
+    width: 50px;
+}
+
+.nome_brano h5{
+    color: white;
+}
+
+.barra_player .nome_brano{
+    margin: 0 20px 0 10px;
+}
+
+.favourite i{
+    margin: 0 5px;
+}
+
+.player i{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.barra_caricamento .barra, .barra_caricamento .barra_chiara{
+    height: 5px;
+    width: calc(100% - 150px);
+    border-radius: 10px;
+}
+
+.barra_caricamento .barra, .volume .barra{
+    display: inline-block;
+    background-color: rgb(128, 128, 128);
+    margin: 0 10px;
+    position: relative;
+}
+
+.barra_caricamento .barra_chiara, .volume .barra_chiara{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+}
+
+.barra_player .volume{
+    display: flex;
+    align-items: center;
+    min-width: 190px;
+}
+
+.barra_player a{
+    color: white;
+}
+
+.volume i{
+    margin: 0 5px;
+}
+
+.volume .barra{
+    width: 50%;
+}
+
+.volume .barra, .volume .barra_chiara{
+    height: 5px;
+    border-radius: 20px;
 }

@@ -18,7 +18,7 @@
                     </div>
                     <ul>
                         <li id="selected">
-                            <div class="selettore"></div>
+                            <div class="selezione_verticale"></div>
                             <a href="#">
                                 <img src="img/home.svg" alt="home">
                                 <span>Home</span>
@@ -82,7 +82,7 @@
                     <div class="profilo">
                         <a href="#">
                             <img src="img/profile.svg" alt="">
-                            <span>John Doe</span>
+                            <span class="white">John Doe</span>
                         </a>
                     </div>
                 </div>
@@ -90,11 +90,13 @@
             </aside>
             <aside class="colonne_right">
                 <div class="nav_interna">
-                    <a href="#" id="upgrade">EFFETTUA L'UPGRADE</a>
+                    <a href="#" id="upgrade" class="white">EFFETTUA L'UPGRADE</a>
                 </div>
                 <div class="container_musica">
                     <ul id="selezione">
-                        <li><a href="#">IN EVIDENZA</a></li>
+                        <li><a href="#">IN EVIDENZA</a>
+                            <div class="selezione_orizzontale"></div>
+                        </li>
                         <li><a href="#">PODCAST</a></li>
                         <li><a href="#">CLASSIFICHE</a></li>
                         <li><a href="#">GENERI E MOOD</a></li>
@@ -104,32 +106,179 @@
 
                     <section>
                         <h2>Recently Played</h2>
-                        <div class="row_flex">
-                            <div class="musica">
+                        <ul class="row_flex">
+                            <li class="musica">
+                                <div class="album">
+                                    <img src="img/metal_lifting.jpg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Heavy Metal</h3>
+                                <h5>subtitle</h5>
+                            </li>
+                            <li class="musica">
+                                <div class="album">
+                                    <img src="img/stranger.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
+                                <h5>Kyle Dixon & Michael Stein</h5>
+                            </li>
+                            <li class="musica">
+                                <div class="album">
+                                    <img src="img/aquietplace.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>A quiet place</h3>
+                                <h5>subtitle</h5>
+                            </li>
+                            <li class="musica">
+                                <div class="album">
+                                    <img src="img/split.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Split</h3>
+                                <h5>subtitle</h5>
+                            </li>
+                            <li class="musica">
+                                <div class="album">
+                                    <img src="img/cure.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>A cure for wellness</h3>
+                                <h5>subtitle</h5>
+                            </li>
+                            <li class="musica">
+                                <div class="album">
+                                    <img src="img/sinister.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Sinister</h3>
+                                <h5>subtitle</h5>
+                            </li>
+                        </ul>
+                    </section>
 
-                            </div>
-                            <div class="musica">
 
-                            </div>
-                            <div class="musica">
+                    <section>
+                        <h2>Creato per John Doe</h2>
+                        <h5>Più ascolti, più accurati saranno i suggerimenti.</h5>
+                        <ul class="row_flex">
+                            <li class="musica">
+                                <div class="album">
+                                    <img src="img/radar.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Release Radar</h3>
+                            </li>
+                            <li class="musica">
+                                <div class="album">
+                                    <img src="img/mixdaily.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Daily Mix 1</h3>
+                            </li>
+                        </ul>
+                    </section>
 
-                            </div>
-                            <div class="musica">
-
-                            </div>
-                            <div class="musica">
-
-                            </div>
-                            <div class="musica">
-
-                            </div>
-                        </div>
+                    <section>
+                        <h2>Artisti più popolari</h2>
+                        <h5>Più ascolti, più accurati saranno i suggerimenti.</h5>
+                        <ul class="row_flex">
+                            <li class="musica circle">
+                                <div class="album">
+                                    <img src="img/youg.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Youg</h3>
+                            </li>
+                            <li class="musica circle">
+                                <div class="album">
+                                    <img src="img/einaudi.jpeg" alt="Copertina album">
+                                    <a href="#">
+                                        <div class="layover">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Einaudi</h3>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </aside>
         </div>
-        <div class="player">
-
+        <div class="barra_player">
+            <div class="brano">
+                <img src="img/sinister.jpeg" alt="album">
+                <div class="nome_brano">
+                    <h5>Sinister</h5>
+                    <h6>Brano Nome</h6>
+                </div>
+                <div class="favourite">
+                    <a href="#"><i class="far fa-heart"></i></a>
+                    <a href="#"><i class="far fa-folder"></i></a>
+                </div>
+            </div>
+            <div class="player">
+                <div class="tasti">
+                    <a href="#"><i class="fas fa-random"></i></a>
+                    <a href="#"><i class="fas fa-step-backward"></i></a>
+                    <a href="#"><i class="far fa-play-circle"></i></a>
+                    <a href="#"><i class="fas fa-step-forward"></i></a>
+                    <a href="#"><i class="fas fa-redo"></i></a>
+                </div>
+                <div class="barra_caricamento">
+                    <span class="white">0:25</span>
+                    <div class="barra">
+                        <div class="barra_chiara"></div>
+                    </div>
+                    <span class="white">4:35</span>
+                </div>
+            </div>
+            <div class="volume white">
+                <a href="#"><i class="fas fa-list-ul"></i></a>
+                <a href="#"><i class="fas fa-desktop"></i></a>
+                <a href="#"><i class="fas fa-volume-up"></i></a>
+                <div class="barra">
+                    <div class="barra_chiara"></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
