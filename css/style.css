@@ -19,7 +19,7 @@ ul{
 }
 
 .grey{
-    rgb(128, 128, 128)
+    color: rgb(128, 128, 128);
 }
 
 .container{
@@ -37,13 +37,13 @@ ul{
     justify-content: space-between;
 }
 
-.logo{
+#logo{
     height: 100px;
     display: flex;
     align-items: center;
 }
 
-.logo img{
+#logo img{
     width: 150px;
     height: auto;
 }
@@ -79,6 +79,10 @@ ul{
     font-size: 14px;
 }
 
+.nav_left a:hover, #selezione a:hover{
+    color: white;
+}
+
 .nav_left img{
     height: 20px;
     vertical-align: middle;
@@ -93,13 +97,6 @@ ul{
 .utente{
     width: 90%;
     margin:0 auto;
-}
-
-#upgrade{
-    border: 1px solid white;
-    border-radius: 20px;
-    padding: 10px;
-    margin-right: 10px;
 }
 
 /* Regole menù utente sinistra */
@@ -145,6 +142,16 @@ ul{
     align-items: center;
 }
 
+#upgrade{
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#upgrade:hover{
+    font-size: 20px;
+}
 
 /* Regole blocco con scroll */
 section{
@@ -179,6 +186,7 @@ section{
     background-color:#C8FF00;
 }
 
+/* Regole riquadri musica */
 .row_flex{
     display: flex;
     justify-content: flex-start;
@@ -188,26 +196,6 @@ section{
 .row_flex .musica{
     max-width: calc(100% / 6 - 20px);
     margin: 0 10px;
-}
-
-.container_musica h2, .container_musica h3 {
-    color: white;
-}
-
-.container_musica h2{
-    margin: 10px;
-}
-
-.container_musica h3{
-    margin: 15px 0;
-}
-
-.container_musica h5{
-    color: rgb(128, 128, 128);
-}
-
-.container_musica section > h5{
-    margin: 10px;
 }
 
 .container_musica .musica{
@@ -247,6 +235,27 @@ section{
 
 .container_musica .musica.circle img, .container_musica .musica.circle .layover{
     border-radius: 50%;
+}
+
+/* Regole Testi  */
+.container_musica h2, .container_musica h3 {
+    color: white;
+}
+
+.container_musica h2{
+    margin: 10px;
+}
+
+.container_musica h3{
+    margin: 15px 0;
+}
+
+.container_musica h5{
+    color: rgb(128, 128, 128);
+}
+
+.container_musica section > h5{
+    margin: 10px;
 }
 
 /* Regole della barra player */
@@ -294,7 +303,7 @@ section{
 }
 
 .barra_caricamento .barra, .barra_caricamento .barra_chiara{
-    height: 5px;
+    height: 3px;
     width: calc(100% - 150px);
     border-radius: 10px;
 }
@@ -312,6 +321,25 @@ section{
     top: 0;
     left: 0;
     width: 25%;
+}
+
+.pallina{
+    display: none;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.barra_chiara:hover .pallina{
+    display: block;
+}
+
+.barra_chiara:hover{
+    background-color: green;
 }
 
 .barra_player .volume{
@@ -333,6 +361,13 @@ section{
 }
 
 .volume .barra, .volume .barra_chiara{
-    height: 5px;
+    height: 3px;
     border-radius: 20px;
+}
+
+
+/* MediaQ */
+
+@media all and (max-width: ) {
+
 }
