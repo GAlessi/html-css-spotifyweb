@@ -34,7 +34,6 @@ ul{
     background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 #logo{
@@ -46,6 +45,11 @@ ul{
 #logo img{
     width: 150px;
     height: auto;
+}
+
+#logo #logo_piccolo{
+    display: none;
+    width: 25px;
 }
 
 /* Regole dei sottomenù sinistra */
@@ -86,6 +90,21 @@ ul{
 .nav_left img{
     height: 20px;
     vertical-align: middle;
+}
+
+.nuova_playlist{
+    padding: 2px 15px;
+}
+
+.nuova_playlist h4{
+    color: white;
+    margin: 5px 0;
+}
+
+#playlist {
+    flex-grow: 1;
+    min-height: 70px;
+    overflow: auto;
 }
 
 #plus{
@@ -208,6 +227,7 @@ section{
 
 .container_musica img{
     width: 100%;
+    max-height: 300px;
 }
 
 .container_musica .layover{
@@ -238,7 +258,7 @@ section{
 }
 
 /* Regole Testi  */
-.container_musica h2, .container_musica h3 {
+.container_musica h2, .container_musica h3{
     color: white;
 }
 
@@ -260,14 +280,12 @@ section{
 
 /* Regole della barra player */
 .barra_player{
-    height: 100px;
+    min-height: 100px;
     background-color: #282828;
     color: rgb(128, 128, 128);
     padding: 0 10px;
-}
-
-.barra_player .brano{
-    min-width: 190px;
+    position: relative;
+    z-index: 900;
 }
 
 .barra_player, .barra_player .brano, .barra_player .favourite{
@@ -277,7 +295,8 @@ section{
 }
 
 .player{
-    width: 40%;
+    max-width: 40%;
+    min-width: 215px;
     text-align: center;
 }
 
@@ -295,6 +314,14 @@ section{
 
 .favourite i{
     margin: 0 5px;
+}
+
+.barra_player a{
+    color: white;
+}
+
+.barra_player .fa-play-circle:hover{
+    font-size: 25px;
 }
 
 .player i{
@@ -345,15 +372,25 @@ section{
 .barra_player .volume{
     display: flex;
     align-items: center;
-    min-width: 190px;
+    width: 190px;
 }
 
-.barra_player a{
+.favourite{
+    display: flex;
+    flex-direction: row;
+}
+
+.favourite a{
+    color: rgb(128, 128, 128);
+}
+
+.favourite a:hover{
     color: white;
 }
 
 .volume i{
     margin: 0 5px;
+    font-size: 20px;
 }
 
 .volume .barra{
@@ -367,7 +404,81 @@ section{
 
 
 /* MediaQ */
+/* Lg ( fino a 1200), Md (1199 a 992), S (991 a 678), Xs (sotto i 677) */
 
-@media all and (max-width: ) {
+/* XS */
+@media all and (max-width: 677px ) {
 
+/* media xs navbar sinistra */
+
+    #logo img{
+        display: none;
+    }
+
+    #logo #logo_piccolo{
+        display: block;
+    }
+
+    .nuova_playlist{
+        display: none;
+    }
+
+    #playlist{
+        display: none;
+    }
+
+    .utente{
+        text-align: center;
+    }
+
+/* media xs parte albums */
+    .row_flex .musica{
+        max-width: calc(100% / 2 - 20px);
+    }
+
+    .nav_left span{
+        display: none;
+    }
+
+    .nav_left{
+        width: 50px;
+    }
+
+    .nav_left ul:first-child{
+        flex-grow: 1;
+    }
+    .colonne_right{
+        width: calc(100% - 50px);
+    }
+
+    .barra_player .brano img{
+        width: 25px;
+    }
+
+    .barra_player .volume{
+        width: 140px;
+    }
+
+    .volume i{
+        font-size: 10px;
+    }
+}
+
+/* S */
+@media all and (max-width: 991px ){
+    .row_flex .musica{
+        max-width: calc(100% / 2 - 20px);
+        margin-top: 20px;
+    }
+
+    .favourite{
+        flex-direction: column;
+    }
+}
+
+/* Md */
+@media all and (max-width: 1199px ) and (min-width: 992px) {
+    .row_flex .musica{
+        max-width: calc(100% / 4 - 20px);
+    }
 }
