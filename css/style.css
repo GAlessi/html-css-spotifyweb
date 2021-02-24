@@ -14,14 +14,6 @@ ul{
     list-style-type: none;
 }
 
-.white{
-    color: white;
-}
-
-.grey{
-    color: rgb(128, 128, 128);
-}
-
 .container{
     display: flex;
     flex-direction: row;
@@ -61,7 +53,7 @@ ul{
     padding: 2px 15px;
 }
 
-.nav_left li:first-child a{
+#selected span{
     color: white;
 }
 
@@ -101,16 +93,16 @@ ul{
     margin: 5px 0;
 }
 
-#playlist {
-    flex-grow: 1;
-    min-height: 70px;
-    overflow: auto;
-}
-
 #plus{
     color: black;
     padding: 5px;
     background-color: rgb(128, 128, 128);
+}
+
+#playlist {
+    flex-grow: 1;
+    min-height: 70px;
+    overflow: auto;
 }
 
 .utente{
@@ -162,6 +154,7 @@ ul{
 }
 
 #upgrade{
+    color: white;
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px;
@@ -295,9 +288,10 @@ section{
 }
 
 .player{
-    max-width: 40%;
-    min-width: 215px;
+    width: 40%;
+    min-width: 180px;
     text-align: center;
+    color: white;
 }
 
 .barra_player img{
@@ -320,13 +314,17 @@ section{
     color: white;
 }
 
-.barra_player .fa-play-circle:hover{
-    font-size: 25px;
+.player i{
+    font-size: 15px;
+    margin: 10px;
 }
 
-.player i{
+.barra_player .fa-play-circle{
     font-size: 20px;
-    margin: 10px;
+}
+
+.barra_player .fa-play-circle:hover{
+    font-size: 25px;
 }
 
 .barra_caricamento .barra, .barra_caricamento .barra_chiara{
@@ -361,11 +359,11 @@ section{
     border-radius: 50%;
 }
 
-.barra_chiara:hover .pallina{
+.barra:hover .pallina, .barra:hover .pallina_volume{
     display: block;
 }
 
-.barra_chiara:hover{
+.barra:hover .barra_chiara{
     background-color: green;
 }
 
@@ -388,6 +386,10 @@ section{
     color: white;
 }
 
+.volume{
+    color: white;
+}
+
 .volume i{
     margin: 0 5px;
     font-size: 20px;
@@ -402,6 +404,16 @@ section{
     border-radius: 20px;
 }
 
+.pallina_volume{
+    display: none;
+    position: absolute;
+    top: -3px;
+    right: -10px;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
 
 /* MediaQ */
 /* Lg ( fino a 1200), Md (1199 a 992), S (991 a 678), Xs (sotto i 677) */
@@ -451,8 +463,14 @@ section{
         width: calc(100% - 50px);
     }
 
+/* player */
     .barra_player .brano img{
         width: 25px;
+    }
+
+    .player i{
+        font-size: 10px;
+        margin: 10px;
     }
 
     .barra_player .volume{
