@@ -30,6 +30,7 @@ ul{
 
 #logo{
     height: 100px;
+    margin-left: 15px;
     display: flex;
     align-items: center;
 }
@@ -67,7 +68,7 @@ ul{
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: #C8FF00;
+    background-color: rgb(26,252,31);
 }
 
 .nav_left a, #selezione a{
@@ -195,7 +196,7 @@ section{
     width: 40%;
     height: 3px;
     margin: 0 auto;
-    background-color:#C8FF00;
+    background-color: rgb(26,252,31);
 }
 
 /* Regole riquadri musica */
@@ -205,12 +206,12 @@ section{
     flex-wrap: wrap;
 }
 
-.row_flex .musica{
+.row_flex li{
     max-width: calc(100% / 6 - 20px);
     margin: 0 10px;
 }
 
-.container_musica .musica{
+.container_musica .row_flex li{
     text-align: center;
 }
 
@@ -246,7 +247,7 @@ section{
     display: block;
 }
 
-.container_musica .musica.circle img, .container_musica .musica.circle .layover{
+.container_musica .circle img, .container_musica .circle .layover{
     border-radius: 50%;
 }
 
@@ -364,7 +365,7 @@ section{
 }
 
 .barra:hover .barra_chiara{
-    background-color: green;
+    background-color: rgb(26,252,31);
 }
 
 .barra_player .volume{
@@ -444,7 +445,7 @@ section{
     }
 
 /* media xs parte albums */
-    .row_flex .musica{
+    .row_flex li{
         max-width: calc(100% / 2 - 20px);
     }
 
@@ -456,7 +457,7 @@ section{
         width: 50px;
     }
 
-    .nav_left ul:first-child{
+    .nav_left ul{
         flex-grow: 1;
     }
     .colonne_right{
@@ -484,7 +485,7 @@ section{
 
 /* S */
 @media all and (max-width: 991px ){
-    .row_flex .musica{
+    .row_flex li{
         max-width: calc(100% / 2 - 20px);
         margin-top: 20px;
     }
@@ -496,7 +497,7 @@ section{
 
 /* Md */
 @media all and (max-width: 1199px ) and (min-width: 992px) {
-    .row_flex .musica{
+    .row_flex li{
         max-width: calc(100% / 4 - 20px);
     }
 }
