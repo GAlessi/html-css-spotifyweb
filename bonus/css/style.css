@@ -353,6 +353,9 @@ section{
     top: 0;
     left: 0;
     width: 25%;
+    animation-name: play;
+    animation-duration: 60s;
+    animation-play-state: paused;
 }
 
 .pallina{
@@ -372,6 +375,12 @@ section{
 
 .barra:hover .barra_chiara{
     background-color: rgb(26,252,31);
+    animation-play-state: running;
+}
+
+@keyframes play {
+    from {width: 1%;}
+    to {width: 100%;}
 }
 
 .barra_player .volume{
