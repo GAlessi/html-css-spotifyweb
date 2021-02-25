@@ -54,21 +54,22 @@ ul{
     padding: 2px 15px;
 }
 
-#selected span{
-    color: white;
-}
-
-#selected{
+.selected{
     position: relative;
 }
 
 .selezione_verticale{
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 3px;
     background-color: rgb(26,252,31);
+}
+
+.selected:hover .selezione_verticale{
+    display: block;
 }
 
 .nav_left a, #selezione a{
@@ -193,10 +194,15 @@ section{
 }
 
 .selezione_orizzontale{
-    width: 40%;
+    display: none;
+    width: 30px;
     height: 3px;
     margin: 0 auto;
     background-color: rgb(26,252,31);
+}
+
+#selezione li:hover .selezione_orizzontale{
+    display: block;
 }
 
 /* Regole riquadri musica */
@@ -499,5 +505,15 @@ section{
 @media all and (max-width: 1199px ) and (min-width: 992px) {
     .row_flex li{
         max-width: calc(100% / 4 - 20px);
+    }
+}
+
+@media all and (max-height: 438px) {
+    .nav_interna{
+        display: none;
+    }
+
+    .container_musica{
+        height: 100vh;
     }
 }
