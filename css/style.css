@@ -501,10 +501,3 @@ section{
         max-width: calc(100% / 4 - 20px);
     }
 }
-
-
-@media all and (min-height: 400px) {
-    .nav_interna{
-        display: none;
-    }
-}
