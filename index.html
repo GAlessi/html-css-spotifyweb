@@ -112,7 +112,7 @@
 
                     <!-- ALbum ascoltati di recente -->
                     <section>
-                        <h2>Recently Played</h2>
+                        <h2 id="cambio">Recently Played</h2>
                         <ul class="row_flex">
                             <li>
                                 <div class="album">
@@ -294,5 +294,10 @@
                 </div>
             </div>
         </div>
+
+<!-- JavaScript -->
+        <script>
+            document.getElementById("cambio").innerHTML = "Titolo Cambiato"
+        </script>
     </body>
 </html>
